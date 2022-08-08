@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+
+body {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    background-image: url(/countdownTimer/img/pedro-miranda-vaP-tUfIXFU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+}
+.h1 {
+    font-size: 5rem;
+}
+
+.date {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    line-height: 0;
+    font-size: 4rem;
+}
+
