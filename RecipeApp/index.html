@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeApp</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <menu class="menu">
+                <div class="logo">Recipe App</div>
+                <ul>
+                    <li><a href="#">Random Recipe</a></li>
+                    <li><a href="#">Favorites</a></li>
+                </ul>
+                <div class="form">
+                    <form id="recipeform" action="https://api.spoonacular.com/food/ingredients/search?query=banana&number=2&sort=calories&sortDirection=desc">
+                        <div class="form_container">
+                            <input placeholder="Enter ingredient" form="recipeform" type="text"><button class="form_button"><i class="icon_button fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </menu>
+        </header>
+        <article class="favorites">
+            <div class="favorites_container">
+                <img src="bananachips2.jpg" alt="Banana Chips">
+                <h6>Banana Chips</h6>
+            </div>
+            <div class="favorites_container">
+                <img src="bananachips2.jpg" alt="Banana Chips">
+                <h6>Banana Chips</h6>
+            </div>
+            <div class="favorites_container">
+                <img src="bananachips2.jpg" alt="Banana Chips">
+                <h6>Banana Chips</h6>
+            </div>
+            <div class="favorites_container">
+                <img src="bananachips2.jpg" alt="Banana Chips">
+                <h6>Banana Chips</h6>
+            </div>
+        </article>
+        <main class="main">
+            <div class="main__recipes">
+                <h3 class="main__recipes_h3">Banana Chips</h3>
+                <img class="main__recipes_img" src="" alt="Banana Chips">
+            </div>
+            
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/4d34f4c6b7.js" crossorigin="anonymous"></script>
+</body>
+</html>
