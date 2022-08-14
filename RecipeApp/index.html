@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="normalize.css">
     <script async src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -20,16 +22,15 @@
                     <li><a href="#">Favorites</a></li>
                 </ul>
                 <div class="form">
-                    <form id="recipeform" action="https://api.spoonacular.com/food/ingredients/search?query=banana&number=2&sort=calories&sortDirection=desc">
-                        <div class="form_container">
-                            <input placeholder="Enter ingredient" form="recipeform" type="text"><button class="form_button"><i class="icon_button fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                    </form>
+                    <div class="form_container">
+                        <input placeholder="Enter ingredient" type="text"><button class="search-term form_button"><i
+                                class="search icon_button fa-solid fa-magnifying-glass"></i></button>
+                    </div>
                 </div>
             </menu>
         </header>
         <article class="favorites">
-            
+
         </article>
         <main class="main">
             <div class="main__recipes">
@@ -39,12 +40,13 @@
                     <button class="main__recipes_btn"><i class="fa-solid fa-heart"></i></button>
                     <h6 class="random_recipe">Random Recipe</h6>
                 </div>
-                
+
             </div>
-            
+
         </main>
     </div>
-    
+
     <script src="https://kit.fontawesome.com/4d34f4c6b7.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

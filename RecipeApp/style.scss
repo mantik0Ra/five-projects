@@ -114,6 +114,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
 
 
 }
@@ -129,7 +130,16 @@ body {
     white-space: nowrap;
 
 
-
+}
+.favorites_container_button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    font-size: 10px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
 }
 
 .favorites img {
@@ -151,6 +161,7 @@ body {
 .main__recipes {
     display: flex;
     cursor: pointer;
+    gap: 30px;
     border-radius: 5px;
     flex-direction: row;
     min-height: 0px;

@@ -131,6 +131,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .favorites_container h6 {
@@ -142,6 +143,17 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.favorites_container_button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  font-size: 10px;
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
 }
 
 .favorites img {
@@ -171,6 +183,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+  gap: 30px;
   border-radius: 5px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
