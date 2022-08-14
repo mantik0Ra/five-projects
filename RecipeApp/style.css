@@ -81,6 +81,7 @@ body {
   position: absolute;
   background-color: white;
   padding: 7px;
+  cursor: pointer;
 }
 
 .icon_button {
@@ -102,6 +103,13 @@ body {
   overflow: auto;
   padding: 20px;
   border: 3px white solid;
+  list-style-type: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.favorites::-webkit-scrollbar {
+  display: none;
 }
 
 .favorites_container {
@@ -164,10 +172,10 @@ body {
   display: flex;
   cursor: pointer;
   border-radius: 5px;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   min-height: 0px;
   margin-top: 20px;
   -webkit-box-pack: center;
@@ -176,12 +184,80 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 20px;
   font-weight: 400;
 }
 .main__recipes h3 {
   font-weight: 400;
+  margin-left: 5px;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: none;
+  text-overflow: ellipsis;
 }
 .main__recipes img {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 350px;
+  width: 450px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.recipe_container {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  max-width: 556px;
+  max-height: 444px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border-radius: 10px;
+  position: relative;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.main__recipes_btn {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  color: gray;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.random_recipe {
+  position: absolute;
+  font-size: 20px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0px;
+  width: 180px;
+  background-color: white;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.active {
+  color: red;
 }

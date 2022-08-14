@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecipeApp</title>
     <link rel="stylesheet" href="normalize.css">
+    <script async src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="container">
@@ -27,32 +29,22 @@
             </menu>
         </header>
         <article class="favorites">
-            <div class="favorites_container">
-                <img src="bananachips2.jpg" alt="Banana Chips">
-                <h6>Banana Chips</h6>
-            </div>
-            <div class="favorites_container">
-                <img src="bananachips2.jpg" alt="Banana Chips">
-                <h6>Banana Chips</h6>
-            </div>
-            <div class="favorites_container">
-                <img src="bananachips2.jpg" alt="Banana Chips">
-                <h6>Banana Chips</h6>
-            </div>
-            <div class="favorites_container">
-                <img src="bananachips2.jpg" alt="Banana Chips">
-                <h6>Banana Chips</h6>
-            </div>
+            
         </article>
         <main class="main">
             <div class="main__recipes">
-                <h3 class="main__recipes_h3">Banana Chips</h3>
-                <img class="main__recipes_img" src="" alt="Banana Chips">
+                <div class="recipe_container">
+                    <h3 class="main__recipes_h3"></h3>
+                    <img class="main__recipes_img" src="" alt="">
+                    <button class="main__recipes_btn"><i class="fa-solid fa-heart"></i></button>
+                    <h6 class="random_recipe">Random Recipe</h6>
+                </div>
+                
             </div>
             
         </main>
     </div>
-    <script src="script.js"></script>
+    
     <script src="https://kit.fontawesome.com/4d34f4c6b7.js" crossorigin="anonymous"></script>
 </body>
 </html>
