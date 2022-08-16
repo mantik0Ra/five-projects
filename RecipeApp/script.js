@@ -10,12 +10,12 @@ async function getRandomRecipe() {
     const img = document.querySelector(".main__recipes_img");
     img.src = respData.meals[0].strMealThumb;
     h3.innerHTML = respData.meals[0].strMeal;
-    buttonLike(respData.meals[0].idMeal);
+    buttonLike(respData.meals[0].idMeal, null);
 };
 
 async function getMealById(id) {
     const resp = await fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i="+id);
-    const respData = resp.json();
+    const respData = await resp.json();
     const meal = respData.meals[0];
     
     return meal;
@@ -26,6 +26,8 @@ async function getMealsBySearch(term) {
 
     const respData = await resp.json();
     const meals = respData.meals;
+    let btn = document.querySelector(".main__recipes_btn");
+    
 
     return meals;
 
@@ -40,10 +42,11 @@ function addMeal(meal) {
                     <h3 class="main__recipes_h3">${meal.strMeal}</h3>
                     <img class="main__recipes_img" src="${meal.strMealThumb}" alt="">
                     <button class="main__recipes_btn"><i class="fa-solid fa-heart"></i></button>
-                    <h6 class="random_recipe">Random Recipe</h6>
                 </div>
 
             `
+
+    buttonLike(meal.idMeal, container);        
 
     mainContainer.appendChild(container);        
 }
@@ -51,8 +54,14 @@ function addMeal(meal) {
 getRandomRecipe();
 fetchFavMeals();
 
-function buttonLike(respData) {
-    let button = document.querySelector(".main__recipes_btn");
+function buttonLike(respData, container) {
+    let button = container
+    console.log(button)
+    if(button != null ) {
+        button = container.querySelector(".main__recipes_btn");
+    } else {
+        button = document.querySelector(".main__recipes_btn");
+    }
     let data = respData;
     button.addEventListener("click", (e) => {
         if(e.target.classList.contains("active")) {
@@ -93,9 +102,7 @@ async function fetchFavMeals() {
 
     for(let i=0; i < mealIds.length; i++) {
         const mealId = mealIds[i];
-        console.log(mealId)
         let resp = await getMealById(mealId);
-        console.log(resp)
         addMealToFav(resp);
     }
     
@@ -103,6 +110,7 @@ async function fetchFavMeals() {
 
 function addMealToFav(mealData) {
     const favMeal = document.createElement("li");
+
     
 
     favMeal.innerHTML = `
@@ -120,6 +128,7 @@ function addMealToFav(mealData) {
         favoriteContainer.innerHTML = ""
         fetchFavMeals();
     });
+
             
 
     favoriteContainer.appendChild(favMeal);        

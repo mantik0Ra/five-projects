@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    background-color: #bfbf;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 80px;
+    opacity: 0.4;
+    color: blue;
+    font-weight: 700;
+
+}
+
+.form {
+    width: 350px;
+
+}
+
+.input {
+    width: 350px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 25px;
+
+}
+.form-container {
+    max-width: 350px;
+    
+
+}
+
+.todoList {
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    padding: 0%;
+    list-style-type: none;
+    margin: 0;
+    & li:hover {
+        background-color: rgb(209, 204, 204);
+    }
+
+}
+
+li {
+    min-width: 354px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.complete {
+    text-decoration: line-through;
+    background-color: rgb(160, 155, 155);
+    
+}
+
+span {
+    font-size: 14px;
+    opacity: 0.4;
+    display: block;
+    margin: 15px;
+
+}
